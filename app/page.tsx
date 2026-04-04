@@ -1,65 +1,89 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="max-w-4xl mx-auto my-10 p-12 bg-white border border-gray-200 shadow-sm font-sans text-gray-800">
+      
+      {/* HEADER SECTION */}
+      <header className="mb-10 border-b-4 border-emerald-600 pb-6">
+        <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight">Your Name</h1>
+        <div className="mt-3 flex gap-4 text-sm text-gray-600">
+          <span>Tampa, FL</span>
+          <span>•</span>
+          <a href="mailto:email@usf.edu" className="hover:text-emerald-600">email@usf.edu</a>
+          <span>•</span>
+          <span>(352) 514-2151</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* EDUCATION SECTION */}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold uppercase tracking-widest text-emerald-700 mb-4">Education</h2>
+        <div className="flex justify-between items-baseline">
+          <h3 className="text-lg font-bold">University of South Florida</h3>
+          <span className="text-sm font-medium text-gray-500">Aug 2023 – May 2027</span>
         </div>
-      </main>
-    </div>
+        <p className="italic">Bachelor of Science in Business Analytics and Information Systems</p>
+        <ul className="list-disc list-inside mt-2 text-gray-700">
+          <li>GPA: 3.6/4.0</li>
+          <li>Dean's List Honors</li>
+        </ul>
+      </section>
+
+      {/* WORK EXPERIENCE */}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold uppercase tracking-widest text-emerald-700 mb-4">Experience</h2>
+        <div className="space-y-6">
+          <div>
+            <div className="flex justify-between">
+              <h3 className="font-bold">Owner & Operator | eBay Sales Business</h3>
+              <span className="text-sm text-gray-500">May 2018 – Present</span>
+            </div>
+            <p className="text-sm text-gray-600 mt-1">
+              Analyze product trends and refurbish electronics for resale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS SECTION */}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold uppercase tracking-widest text-emerald-700 mb-4">Skills</h2>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h3 className="font-bold">Technical</h3>
+            <ul className="list-disc list-inside mt-2 text-gray-700">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold">Soft Skills</h3>
+            <ul className="list-disc list-inside mt-2 text-gray-700">
+              <li>Communication</li>
+              <li>Problem Solving</li>
+              <li>Teamwork</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+        {/* PROJECTS SECTION */}
+        <section>
+          <h2 className="text-xl font-bold uppercase tracking-widest text-emerald-700 mb-4">Projects</h2>
+          <div className="space-y-6">
+            <div>
+            <div className="flex justify-between">
+              <h3 className="font-bold">Business Analytics Tableau Assignment</h3>
+              <span className="text-sm text-gray-500">June 2025 – July 2025</span>
+            </div>
+            <p className="text-sm text-gray-600 mt-1">
+              ▪	Completed nine workbooks on different sales of a company selling between three categories of technology, furniture, and office supplies which were evaluated on an overview dashboard of the sales and a dashboard on recommended strategies for the future.
+▪	Used organization, effective presentation skills, business analyst insights, and data to complete a visual presentation on recommendations to improve underperforming product segments to my peers
+
+            </p>
+            </div>
+          </div>
+        </section>
+    </main>
   );
 }
